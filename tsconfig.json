@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "es2017"
+    ],
+    "types": [
+      "vite/client",
+      "@types/jest"
+    ],
+    "allowJs": false,
+    "skipLibCheck": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "declaration": false,
+    "isolatedModules": true,
+    "typeRoots": [
+      "types",
+      "./node_module/@types"
+    ],
+    "noEmit": true,
+    "jsx": "react"
+  },
+  "include": [
+    "./src",
+    "lib"
+  ]
+}
