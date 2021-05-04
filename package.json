@@ -1,6 +1,18 @@
 {
   "name": "intl-lightly",
   "version": "1.0.0",
+  "description": "A lightly intl packege,it can be run in any .js file",
+  "keywords": [
+    "intl",
+    "translate",
+    "lightly",
+    "i18n",
+    "react",
+    "vue",
+    "node",
+    "locale",
+    "localization"
+  ],
   "files": [
     "dist"
   ],
@@ -12,6 +24,7 @@
       "require": "./dist/intl-lightly.umd.js"
     }
   },
+  "homepage": "https://github.com/YunNeo/intl-lightly",
   "types": "./lib/index.d.ts",
   "type": "module",
   "scripts": {

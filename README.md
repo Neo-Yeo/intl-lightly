@@ -19,8 +19,8 @@ A lightly localization library for almost any js project.
     // locales already build in
     intl.init({
         locales:{
-        'en-US':{hi:'Hi !'},
-        'zh-CN':{hi:'你好 !'}
+        'en-US':{hi:'Hi!'},
+        'zh-CN':{hi:'你好!'}
         },
         currentLocales:'en-US'
     })
@@ -35,11 +35,15 @@ A lightly localization library for almost any js project.
     // home.js
     import intl from 'intl-lightly'
 
-    console.log(intl.get('hi'))//out put 'Hi !'
+    intl.get('hi')// 'Hi!'
+
+    intl.change('zh-CN')
+
+    intl.get('hi')// '你好!'
     ```
 
-# Future
-* Not only key=>string but key=>object
+# Features
+* Not only `key`=>`string` but `key`=>`object`
     ```js
         const enUS= {
             hi:'Hi',
