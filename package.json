@@ -1,7 +1,7 @@
 {
   "name": "intl-lightly",
-  "version": "1.0.0",
-  "description": "A lightly intl packege,it can be run in any .js file",
+  "version": "1.0.3",
+  "description": "A lightly localization library for almost any js project.",
   "keywords": [
     "intl",
     "translate",
@@ -14,10 +14,10 @@
     "localization"
   ],
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
-  "main": "./dist/intl-lightly.umd.js",
-  "module": "./dist/intl-lightly.es.js",
+  "main": "./dist/intl-lightly.es.js",
   "exports": {
     ".": {
       "import": "./dist/intl-lightly.es.js",
@@ -25,7 +25,7 @@
     }
   },
   "homepage": "https://github.com/YunNeo/intl-lightly",
-  "types": "./lib/index.d.ts",
+  "types": "./index.d.ts",
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
@@ -39,5 +39,6 @@
     "ts-jest": "^26.5.5",
     "typescript": "^4.1.2",
     "vite": "^2.2.3"
-  }
+  },
+  "license": "MIT"
 }

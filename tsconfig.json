@@ -29,7 +29,7 @@
     "jsx": "react"
   },
   "include": [
-    "./src",
-    "lib"
+    "index.ts",
+    "index.d.ts"
   ]
 }

@@ -56,7 +56,7 @@ declare class IntlLightly {
      * @example
      * intl.select(s=>s.user)
      */
-    select<Tlocale = DefaultLoclae, Tselected = unknown>(selector: (s: Tlocale) => Tselected): "" | Tselected;
+    select<Tlocale = DefaultLoclae, Tselected = unknown>(selector: (s: Tlocale) => Tselected): Tselected;
 
     /**
      * replace the placeholder in template string with real value

@@ -63,8 +63,7 @@ class IntlLightly {
     selector: (s: Tlocale) => Tselected
   ) {
     if (typeof selector !== 'function') {
-      console.error("Intl: selector should be a function");
-      return ''
+      throw new Error("Intl-lightly:param [selector] should be a function");
     }
     return selector(this._locales[this._current])
   };
