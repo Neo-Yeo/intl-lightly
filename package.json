@@ -1,7 +1,7 @@
 {
   "name": "intl-lightly",
-  "version": "1.0.3",
-  "description": "A lightly localization library for almost any js project.",
+  "version": "1.1.0",
+  "description": "A lightweight localization library.",
   "keywords": [
     "intl",
     "translate",
@@ -29,16 +29,14 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
-    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+    "test": "vitest"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@types/node": "^15.0.1",
-    "@types/jest": "^26.0.23",
-    "jest": "^26.6.3",
-    "ts-jest": "^26.5.5",
-    "typescript": "^4.1.2",
-    "vite": "^2.2.3"
+    "@changesets/cli": "^2.26.2",
+    "@types/node": "^20.6.2",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.4"
   },
   "license": "MIT"
 }

@@ -6,10 +6,6 @@
       "DOM.Iterable",
       "es2017"
     ],
-    "types": [
-      "vite/client",
-      "@types/jest"
-    ],
     "allowJs": false,
     "skipLibCheck": false,
     "esModuleInterop": false,

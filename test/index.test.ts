@@ -1,5 +1,5 @@
-import intl from "../lib";
-
+import intl from "..";
+import {describe,test,expect} from 'vitest'
 
 const enUS = {
     hi: 'Hi',
