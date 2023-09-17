@@ -1,45 +1,42 @@
 # intl-lightly
-A lightly localization library for almost any js project.
+A lightweight localization library.
 
 # Getting Started
 
 1. Install
-    ```zsh
+    ```bash
+    #npm
+    pnpm i intl-lightly
+
     #npm
     npm i intl-lightly
 
     #yarn
     yarn add intl-lighly
     ```
+
+
+
 2. Initialize
     ```js
     // eg: boot.js
     import intl from 'inty-lightly'
+    import enLocale from './languages/en-US'
+    import zhLocale from './languages/zh-US'
 
     // locales already build in
     intl.init({
-        locales:{
-        'en-US':{hi:'Hi!'},
-        'zh-CN':{hi:'你好!'}
-        },
-        currentLocales:'en-US'
+      locales:{
+        'en-US':enLocale
+        'zh-CN':zhLocale
+      },
+      currentLocales:'en-US'
     })
 
     // or if locale is dynamic load
-    const enUS = await FetchLocale() 
-    intl.add('en-US',enUS)
+    const zhCN = await import('./languages/zh-US') 
+    intl.add('zh-CN',zhCN)
 
-    ```
-3. Useage
-    ```js
-    // home.js
-    import intl from 'intl-lightly'
-
-    intl.get('hi')// 'Hi!'
-
-    intl.change('zh-CN')
-
-    intl.get('hi')// '你好!'
     ```
 
 # Features
@@ -85,4 +82,46 @@ A lightly localization library for almost any js project.
 
     const formTip = intl.get('formTip')
     intl.replace(formTip.input,{label:'First Name'}) // 'Please input First Name'
+    ```
+
+# Typesafe Usege
+
+1. declare language
+
+    ```ts
+    //en-US.ts
+    const enLocale = {
+        hi: 'Hi',
+        table:{
+            createdAt: 'Created At'
+        }
+        user:{
+          name: 'Name'
+        }
+    }
+    export type EnLocal = typeof enLocale
+    export default enLocale
+    ```
+1. declare typesafe select function
+    
+    ```ts
+    //pickLocale.ts
+    import intl from 'intl-lightly'
+    import { EnLocal } from '../locales/en-gb'
+
+    /**
+    * Pick some locale with intellisense
+    */
+    export function pickLocale<T extends (local: EnLocal) => any>(pick: T) {
+        return intl.select<EnLocal, ReturnType<T>>(pick)
+    }
+    ```
+1. Use `pickLocale` in component
+    ```tsx
+    export function Profile(){
+        const locale = pickLocale(s=>s.user)
+        return (<div>
+            <div>{locale.name}</div>
+        </div>)
+    }
     ```
