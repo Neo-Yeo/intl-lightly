@@ -1,4 +1,4 @@
-import intl from "..";
+import intl from "../index";
 import {describe,test,expect} from 'vitest'
 
 const enUS = {
