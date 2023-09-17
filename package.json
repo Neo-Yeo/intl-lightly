@@ -17,10 +17,10 @@
     "dist",
     "index.d.ts"
   ],
-  "main": "./dist/intl-lightly.es.js",
+  "main": "./dist/intl-lightly.js",
   "exports": {
     ".": {
-      "import": "./dist/intl-lightly.es.js",
+      "import": "./dist/intl-lightly.js",
       "require": "./dist/intl-lightly.umd.js",
       "types": "./index.d.ts"
     }
