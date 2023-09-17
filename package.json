@@ -21,7 +21,8 @@
   "exports": {
     ".": {
       "import": "./dist/intl-lightly.es.js",
-      "require": "./dist/intl-lightly.umd.js"
+      "require": "./dist/intl-lightly.umd.js",
+      "types": "./index.d.ts"
     }
   },
   "homepage": "https://github.com/YunNeo/intl-lightly",
