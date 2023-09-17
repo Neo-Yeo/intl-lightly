@@ -30,6 +30,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
+    "release": "pnpm build && changeset publish",
     "test": "vitest"
   },
   "devDependencies": {
